@@ -1,20 +1,14 @@
-export default function($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider, ITEM_MENU) {
+route.$inject = ['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider'];
 
+export default function route($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
     $urlMatcherFactoryProvider.strictMode(false);
 
-    $stateProvider
-    .state('cesta', {
-        abstract: true,
+    $stateProvider.state('login', {
+        abstract: false,
         cache: false,
-        url: "/cesta",
-        templateUrl: "/client/src/module/commons/views/master_page.html",
-    })
-    .state('cesta.new', {
-        url: '',
-        controller:'CestaController',
-        controllerAs:'cestaCtrl',
-        templateUrl: '/client/src/module/cesta/views/new.html',
-        authenticate: false,
-        itemMenu: ITEM_MENU.CESTA
+        url: "/login",
+        controller: 'LoginController',
+        controllerAs: 'loginCtrl',
+        template: require("./views/teste.html")
     });
-  });
+}

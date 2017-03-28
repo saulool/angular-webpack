@@ -1,6 +1,7 @@
 LoginController.$inject = ['$scope', 'LoginService'];
 
 export default function LoginController($scope, LoginService) {
+	const vm = this;
 
-    LoginService.test();
+	vm.teste = "aaaaaaaaa";
 }

@@ -23,6 +23,7 @@ module.exports = {
         test: /.jpe?g$|.gif$|.png$|.svg$|.woff$|.woff2$|.ttf$|.eot$/,
         loader: "url-loader" 
       },
+      { test: /\.html$/, loader: "raw-loader" },
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
